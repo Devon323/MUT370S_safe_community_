@@ -33,6 +33,13 @@
         .panel {
             background-color: #122f4a;
         }
+        .theCenter {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .sportsStyles h2 p{
+            color:#04090F;
+        }
     </style>
 </head>
 <body>
@@ -52,6 +59,23 @@
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-12">
+                    <h1 class="page-header" style="margin-bottom: 0px;">
+                            Weather
+                    </h1>
+<div class="row theCenter" style="background-color: #122f4b">
+        
+    <div class="col-md-4" style="padding: 50px;">
+        <!-- weather widget start --><a target="_blank" href="http://www.booked.net/weather/cape-town-18075"><img src="https://w.bookcdn.com/weather/picture/3_18075_1_1_137AE9_330_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=25137"  alt="booked.net"/></a><!-- weather widget end -->
+    </div>
+
+    <div class="col-md-4" style="padding: 50px;">
+        <!-- weather widget start --><a target="_blank" href="http://www.booked.net/weather/durban-19485"><img src="https://w.bookcdn.com/weather/picture/3_19485_1_1_137AE9_330_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=25137"  alt="booked.net"/></a><!-- weather widget end -->
+    </div>
+
+    <div class="col-md-4" style="padding: 50px;">
+    <!-- weather widget start --><a target="_blank" href="http://www.booked.net/weather/johannesburg-19057"><img src="https://w.bookcdn.com/weather/picture/3_19057_1_1_137AE9_330_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=25137"  alt="booked.net"/></a><!-- weather widget end -->
+    </div>
+</div>
                 
                 <h1 class="page-header">
                     Latest News Making Headlines
@@ -102,99 +126,38 @@
             </div>
         </div>
         <!-- /.row -->
-
+        
         <!-- Portfolio Section -->
-        <div class="row">
+        <section style="background-color: #122F4A; width: 100%; margin: 0 auto; margin-left: auto; margin-right: auto;">
+        <div class="row theWidth" style="background-color: #122F4A;">
             <div class="col-lg-12">
-                <h2 class="page-header">Sport</h2>
+                <h2 class="page-header">Latest Sports News</h2>
             </div>
-            <div class="col-md-4 col-sm-6 panel-default">
+        <div *ngFor="let sportpost of sportposts.articles">
+            <div class="col-lg-4 col-md-4 col-sm-6 panel-default ">
                     <div class="panel-heading">
-                            <h4>Robber swept away by river as he flees from police</h4>
+                            <h2 style="color: #04090F;">{{ sportpost.title }}</h2>
+                            <p style="font-size: 14px; font-style: italic; color: #808080;">{{ sportpost.author }}</p>
+                            <h6 style="color: grey;">{{ sportpost.publishedAt }} </h6>
+                            <p style="color: #04090F;"> {{ sportpost.description }} </p>
                         </div>
-                <a href="https://cdn.24.co.za/files/Cms/General/d/6705/ae174af9c331481faaae753027f67288.jpg">
-                    <img class="img-responsive img-portfolio img-hover" width="100%" src="https://cdn.24.co.za/files/Cms/General/d/6705/ae174af9c331481faaae753027f67288.jpg" alt="">
+                <a href="{{ sportpost.url }}" target="_blank">
+                    <img class="img-responsive img-portfolio img-hover " width="100%"  src="{{ sportpost.urlToImage }}" alt="">
                 </a>
+                
             </div>
-            <div class="col-md-4 col-sm-6 panel-default">
-                    <div class="panel-heading">
-                            <h4>Manchester United fans tell Jose Mourinho what to do in January transfer window</h4>
-                        </div>
-                <a href="https://cdn.24.co.za/files/Cms/General/d/6705/ae174af9c331481faaae753027f67288.jpg">
-                    <img class="img-responsive img-portfolio img-hover"  src="https://i2-prod.manchestereveningnews.co.uk/incoming/article13781983.ece/ALTERNATES/s458/GettyImages-862878676.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6 panel panel-default">
-                    <div class="panel-heading">
-                            <h4>Robber swept away by river as he flees from police</h4>
-                        </div>
-                <a href="https://cdn.24.co.za/files/Cms/General/d/6705/ae174af9c331481faaae753027f67288.jpg">
-                    <img class="img-responsive img-portfolio img-hover"  src="https://cdn.24.co.za/files/Cms/General/d/6705/ae174af9c331481faaae753027f67288.jpg" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
+
         </div>
-        <!-- /.row -->
-
-        <!-- Features Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Modern Business Features</h2>
-            </div>
-            <div class="col-md-6">
-                <p>The Modern Business template by Start Bootstrap includes:</p>
-                <ul>
-                    <li><strong>Bootstrap v3.3.7</strong>
-                    </li>
-                    <li>jQuery v1.11.1</li>
-                    <li>Font Awesome v4.2.0</li>
-                    <li>Working PHP contact form with validation</li>
-                    <li>Unstyled page elements for easy customization</li>
-                    <li>17 HTML pages</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-            </div>
-            <div class="col-md-6">
-                <img class="img-responsive" src="http://placehold.it/700x450" alt="">
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Call to Action Section -->
-        <div class="well">
-            <div class="row">
-                <div class="col-md-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-                </div>
-                <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
-                </div>
-            </div>
         </div>
 
-        <hr>
+        </section>
+        <!-- .row -->
 
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Safe_Community 2017</p>
                 </div>
             </div>
         </footer>

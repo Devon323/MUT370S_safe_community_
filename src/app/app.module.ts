@@ -14,6 +14,9 @@ import { UsernewsformComponent } from './components/usernewsform/usernewsform.co
 import { UserService } from './user.service';
 import { AuthguardGuard } from './authguard.guard';
 
+import { DataService } from './services/data.service';
+import { DatasportService } from './services/datasport.service';
+
 
 // Navigation Links
 const appRoutes: Routes = [
@@ -21,7 +24,7 @@ const appRoutes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'news', component: NewsComponent},
   {path: 'userpost', component: UserpostComponent, canActivate: [AuthguardGuard]}, // a
-  {path: 'usernewsform', component: UsernewsformComponent},
+  //{path: 'usernewsform', component: UsernewsformComponent},
   {path: 'login', component: LoginComponent}
 ];
 
@@ -41,7 +44,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule
   ],
-  providers: [UserService, AuthguardGuard],
+  providers: [UserService, AuthguardGuard, DataService, DatasportService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

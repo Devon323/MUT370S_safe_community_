@@ -9,7 +9,7 @@
     <!-- Custom Fonts -->
     <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
-<div *ngIf="!name; else forminfo">
+<div style="margin-top: 50px;" *ngIf="!name; else forminfo">
   <form  [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
     <div class="form-container">
       <div class="form-signin">
@@ -38,7 +38,7 @@
 </div>
 
 
-<ng-template #forminfo >
+<ng-template #forminfo style="margin-top: 50px;">
   <div class="form-container">
     <div class="form-signin">
       <h1> {{ confirmMessage }} 
@@ -57,7 +57,7 @@
       <div class="col-sm-5">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <strong>Username: {{ name }}</strong> <span class="text-muted">Date: {{thedate}}</span>
+            <strong>Username: {{ name }}</strong> <span class="text-muted"></span>
           </div>
             <div class="panel-body">
               {{ description }}
